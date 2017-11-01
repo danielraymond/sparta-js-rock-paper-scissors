@@ -52,24 +52,24 @@ function winner() {
 
 var check = 0;
 while (check == 0){
-var playerScore = 0;
-var computerScore = 0;
-while (playerScore <= 2 && computerScore <= 2) {
-  var whoWon = winner();
-  if (whoWon === 0){
-    alert("It's a DRAW!" + "\n\nSCORE: " + playerScore + " - " + computerScore);
-  } else if (whoWon == 1){
-    playerScore ++;
-    alert("You WIN this round!" + "\n\nSCORE: " + playerScore + " - " + computerScore);
-  } else if (whoWon == 2){
-    computerScore ++;
-    alert("You LOSE this round!" + "\n\nSCORE: " + playerScore + " - " + computerScore);
+  var playerScore = 0;
+  var computerScore = 0;
+  while (playerScore <= 2 && computerScore <= 2) {
+    var whoWon = winner();
+    if (whoWon === 0){
+      alert("It's a DRAW!" + "\n\nSCORE: " + playerScore + " - " + computerScore);
+    } else if (whoWon === 1){
+      playerScore ++;
+      alert("You WIN this round!" + "\n\nSCORE: " + playerScore + " - " + computerScore);
+    } else if (whoWon === 2){
+      computerScore ++;
+      alert("You LOSE this round!" + "\n\nSCORE: " + playerScore + " - " + computerScore);
+    }
   }
-}
-if (playerScore === 3){
-  alert("Congratulation you've WON!!!")
-} else if (computerScore === 3){
+  if (playerScore === 3){
+    alert("Congratulation you've WON!!!")
+  } else if (computerScore === 3){
     alert("Unfortunately you LOST this time...")
-}
-check = 1;
+  }
+  check = 1;
 }
